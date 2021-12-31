@@ -1,0 +1,14 @@
+<!doctype html>
+<html>
+    <head>
+        <title>FlurryGen Clipboard</title>
+    </head>
+    
+    <body>
+        <h1 id="placefortext">test</h1>
+        <script>
+            navigator.clipboard.writeText(new URLSearchParams(window.location.search).get('text'))
+            document.getElementById("placefortext").innerHTML = "Copied " + new URLSearchParams(window.location.search).get('text') + " To Clipboard";
+        </script>
+    </body>
+    </html>
